@@ -24,7 +24,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div
+          className="bg-gray-200"
+          style={{
+            height: "90vh",
+            width: "90vw",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {/* Header */}
+          <div className="bg-gray-500">Header</div>
+
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
